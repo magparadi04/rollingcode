@@ -1,65 +1,96 @@
-// Trabajo Practico 1
-// ejercicio 1 Escribe un programa de una sola línea que haga que aparezca en la pantalla un alert que diga “un mensaje”.
+// Trabajo Practico 2
+//Escribir un programa que solicite la edad y si es mayor de 18 años mostrar un mensaje que ya puede conducir, si la edad ingresada no es un número válido indicarlo en un mensaje.
 
-// console.warn ("un mensaje");
+// let edad = parseInt(prompt("Ingrese su edad"));
 
-// document.write ("un mensaje");
+// if (isNaN(edad)){
+//   console.log("La edad ingresada no es un numero valido");
+// } else if (edad > 18){
+//   console.log("Usted puede conducir");
+// } else {
+//   console.log("Usted no puede conducir");
+// }
 
-alert ("un mensaje");
+// Escribir un programa que solicite una nota (número) de 0  a 10. Luego mostrar la calificación en un alert según los siguientes rangos de nota:
 
+// 0-2: Muy deficiente
+// 3-4: Insuficiente
+// 5-6: Suficiente
+// 7: Bien
+// 8-9: Notable
+// 10: Sobresaliente
 
- //ejercicio 2 Escribe un programa de una sola línea que escriba en la pantalla un texto que diga «Hello World» (document.write).
+// Si ingreso un número que no esté dentro del rango de 0 a 10 mostrar un mensaje de “número erróneo”. Si el número ingresado no es válido mostrar el mensaje “Introduce un número válido”.
 
- document.write ("Hello World");
+// let calificacion = parseInt(prompt("Ingrese su calificación"));
 
- // ejercicio 3 Escribe un programa de una sola línea que escriba en la pantalla el resultado de sumar 3 + 5.
-
-
- document.write (`El resultado es ${3+5}`);
-
- // ejercicio 4 Escribe un programa de dos líneas que pida el nombre del usuario con un prompt y escriba un texto que diga «Hola nombreUsuario»
-
- let nombreUsuario = prompt (`ingrese su nombre`)
- console.log (`Hola ${nombreUsuario}!`);
-
- // ejercicio 5 Escribe un programa de tres líneas que pida un número, pida otro número y escriba el resultado de sumar estos dos números
-
- let num1 = parseInt(prompt("Ingrese el primer número"));
-let num2 = parseInt(prompt("Ingrese el segundo número"));
-
-console.log(
-  `El valor de sumar ${num1} con ${num2} es ${num1+num2}`
-);
-
-// ejercicio 6 Escribe un programa que pida dos números y escriba en la pantalla cual es el mayor.
-
-
-let num3 = parseInt(prompt("Ingrese el tercer número"));
-let num4 = parseInt(prompt("Ingrese el cuarto número"));
-let num5 = Math.max (num3, num4);
-
-console.log(
-    `El ${num5} es el número más grande`
-  );
-
-  // ejercicio 7 Escribe un programa que pida 3 números y escriba en la pantalla el mayor de los tres.
-
-  let num6 = parseInt(prompt("Ingrese el sexto número"));
-  let num7 = parseInt(prompt("Ingrese el septimo número"));
-  let num8 = parseInt(prompt("Ingrese el octavo número"));
-  let num9 = Math.max (num6, num7, num8);
-  
-  console.log(
-      `El ${num9} es el número más grande`
-    );
-
-    // ejercicio 8 Escribe un programa que pida un número y diga si es divisible por 2
-
-    let numeroUsuario = parseInt (prompt("Ingrese un número para dividir en 2"));
-    let resto = numeroUsuario % 2
+// if (isNaN(calificacion)){
+//   console.log ("Introduce un numero valido");
+// } 
+// else {
+//   switch (true) {
+//     case (calificacion <= 2): {
+//       console.log("Muy deficiente");
+//       break;
+//     } 
+//     case (calificacion == 3 || calificacion == 4): {
+//       console.log("Insuficiente");
+//       break;
+//     }
+//     case (calificacion == 5 || calificacion == 6): {
+//       console.log("Suficiente");
+//       break;
+//     }
     
-    if (resto==0){
-console.log (`El numero ${numeroUsuario} es divisible por 2`)
-    }else{
-        console.log (`El numero ${numeroUsuario}  No es divisible por 2`)
-    }
+//     case (calificacion == 7): {
+//       console.log("Bien");
+//       break;
+//     }
+//     case (calificacion == 8 || calificacion == 8): {
+//       console.log("Notable");
+//       break;
+//     }
+//     case (calificacion == 10): {
+//       console.log("Sobresaliente");
+//       break;
+//     }
+//     default:{
+//       console.log ("Numero Erroneo");
+//     }
+
+//   }
+// }
+
+// 3- Realiza un script que pida cadenas de texto  hasta que se pulse “cancelar”. Al salir con “cancelar” deben mostrarse todas las cadenas concatenadas con un guión -.
+
+// let lugar = prompt("Ingresa el nombre del lugar que eliges para vacacionar");
+// let vacacionar = "";
+
+// while (lugar) {
+//   if (vacacionar){
+//     vacacionar = vacacionar + " | " + lugar;
+//   }
+//   else{
+//     vacacionar = lugar;
+//   }
+//   lugar = prompt("Ingresa el nombre del lugar que eliges para vacacionar");
+// }
+
+// console.log(vacacionar);
+
+//  4- Realiza un script que pida números hasta que se pulse “cancelar”. Si no es un número deberá indicarse con un «alert» y seguir pidiendo números. Al salir con “cancelar” deberá indicarse la suma total de los números introducidos.
+
+let ingresenumero = parseInt(prompt("Ingresa el numero que deseas sumar"));
+let sumatoria = 0;
+
+while (ingresenumero) {
+  if (isNaN(ingresenumero)){
+    console.warn("Introduce un numero valido");
+  } 
+  else {
+     sumatoria = sumatoria+ingresenumero;
+  }
+  ingresenumero = parseInt(prompt("Ingresa el numero que deseas sumar"));
+}
+
+console.log(sumatoria);
