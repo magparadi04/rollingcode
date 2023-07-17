@@ -46,7 +46,7 @@ else {
       console.log("Bien");
       break;
     }
-    case (calificacion == 8 || calificacion == 8): {
+    case (calificacion == 8 || calificacion == 9): {
       console.log("Notable");
       break;
     }
