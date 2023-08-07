@@ -86,5 +86,18 @@ function calcularPerimetro (alto, ancho){
     return (2*(alto+ancho));
 
 }
-let perimetro = calcularPerimetro(ladoA, ladoB);
-document.write(`El perimetro es ${perimetro}`);
+let _perimetro = calcularPerimetro(ladoA, ladoB);
+document.write(`El perimetro es ${_perimetro}`);
+
+
+var result = 20;
+result = result * 5; 
+document.write(result);
+
+
+let uno = 1;
+let dos = "1";
+
+if (uno === dos){
+    console.log("son iguales");
+}
